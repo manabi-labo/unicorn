@@ -1,0 +1,28 @@
+=== unicorn 6.1.0 / 2021-12-25 18:00 UTC
+
+  This release reduces CPU usage for Linux 4.5+ in most cases.
+  See "[PATCH 6/6] use EPOLLEXCLUSIVE on Linux 4.5+" for more details:
+    https://yhbt.net/unicorn-public/20211001030923.26705-7-bofh@yhbt.net/
+
+  There's a couple of updates for Ruby 3.1, but we've finally
+  started relying on Ruby 2.0.0 features after 9 years :P
+  (so Ruby 1.9.3 users are stuck with older versions).
+
+  And the usual round of doc updates and some build speedups.
+
+  13 changes by the Bozo Doofus maintainer since v6.0.0:
+
+        test_util: less excessive encoding tests
+        drop Ruby 1.9.3 support, require 2.0+ for now
+        drop unnecessary IO#close_on_exec=true assignment
+        extconf.rb: get rid of unnecessary checks
+        makefile: reduce unnecessary rebuilds
+        HACKING: drop outdated information about pandoc
+        http_server: get rid of Process.ppid check
+        worker_loop: get rid of select() avoidance hack
+        use EPOLLEXCLUSIVE on Linux 4.5+
+        allow Ruby to deduplicate remaining globals
+        epollexclusive: remove rb_gc_force_recycle call
+        drop Ruby version warning, fix speling errer
+        doc: v3 .onion updates, nntp => nntps, minor wording changes
+
