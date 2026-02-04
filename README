@@ -1,3 +1,7 @@
+Rails 7 向けに Rack3 に対応したバージョンをforkし、ビルドした結果をコミットしている。
+https://github.com/defunkt/unicorn/commit/9d7bab0bc2211b20806d4d0289a7ea992e49a8a1
+
+---
 = unicorn: Rack HTTP server for fast clients and Unix
 
 unicorn is an HTTP server for Rack applications that has done
